@@ -1,5 +1,5 @@
 import { Navigate, Outlet, useParams } from "react-router-dom";
-import { Note } from "../NoteForm/NoteForm";
+import { Note } from "~/types";
 
 interface INoteLayout {
   notes: Note[];

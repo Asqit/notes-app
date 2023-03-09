@@ -3,21 +3,7 @@ import CreatableReactSelect from "react-select/creatable";
 import { FormEvent, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { v4 as uuidV4 } from "uuid";
-
-export type Tag = {
-  id: string;
-  label: string;
-};
-
-export type Note = {
-  id: string;
-} & NoteData;
-
-export type NoteData = {
-  title: string;
-  markdown: string;
-  tags: Tag[];
-};
+import { Tag, NoteData } from "~/types";
 
 type NoteFormProps = {
   onSubmit: (data: NoteData) => void;

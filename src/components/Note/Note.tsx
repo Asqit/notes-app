@@ -1,4 +1,4 @@
-import { useNote } from "../../hooks";
+import { useNote } from "~/hooks";
 import { Col, Row, Stack, Badge, Button } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import ReactMarkdown from "react-markdown";

@@ -1,21 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
-import { NewNote, NoteList, NoteLayout, Note, EditNote } from "./components";
-import { useLocalStorage } from "./hooks";
-import { NoteData, Tag } from "./components/NoteForm/NoteForm";
+import { NewNote, NoteList, NoteLayout, Note, EditNote } from "~/components";
+import { useLocalStorage } from "~/hooks";
+import { NoteData, Tag, RawNote, RawNoteData } from "~/types";
 import { v4 as uuidV4 } from "uuid";
 import { useMemo } from "react";
-
-export type RawNote = {
-  id: string;
-} & RawNoteData;
-
-export type RawNoteData = {
-  title: string;
-  markdown: string;
-  tagIds: string[];
-};
 
 export default function App() {
   const [notes, setNotes] = useLocalStorage<RawNote[]>("notes", []);

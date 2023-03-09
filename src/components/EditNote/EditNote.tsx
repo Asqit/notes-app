@@ -1,5 +1,6 @@
-import NoteForm, { Tag, NoteData } from "../NoteForm/NoteForm";
-import { useNote } from "../../hooks";
+import NoteForm from "../NoteForm/NoteForm";
+import { useNote } from "~/hooks";
+import { Tag, NoteData } from "~/types";
 
 interface IEditNoteProps {
   onSubmit: (id: string, data: NoteData) => void;
