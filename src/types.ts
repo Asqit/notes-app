@@ -1,24 +1,25 @@
 export type Tag = {
-  id: string;
-  label: string;
+	id: string;
+	label: string;
 };
 
 export type NoteData = {
-  title: string;
-  markdown: string;
-  tags: Tag[];
+	title: string;
+	markdown: string;
+	tags: Tag[];
 };
 
 export type Note = {
-  id: string;
+	id: string;
+	tags: Tag[];
 } & NoteData;
 
 export type RawNote = {
-  id: string;
+	id: string;
 } & RawNoteData;
 
 export type RawNoteData = {
-  title: string;
-  markdown: string;
-  tagIds: string[];
+	title: string;
+	markdown: string;
+	tagIds: string[];
 };
